@@ -106,7 +106,7 @@
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
       <h3>Need something specific?</h3>
-      <p>I'm always looking forward to working on something new.</p>
+      <p>I'm always looking forward to working on something new, try me.</p>
       <a href="contact.html" class="btn btn-large">Hire me</a> </div>
   </div>
 </section>
