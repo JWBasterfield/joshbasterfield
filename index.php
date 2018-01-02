@@ -21,10 +21,10 @@
 
 <body>
 <!-- header section -->
-<section class="innerbanner" role="banner">
+<section class="banner" role="banner">
   <header id="header"> 
     <!-- navigation section  -->
-    <div class="header-content clearfix"> <a class="logo" href="index.html"><img src="images/logo.png" alt="Mafolio"></a>
+    <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt="Mafolio"></a>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
           <li><a href="about.html">About Me</a></li>
@@ -36,33 +36,20 @@
     <!-- navigation section  --> 
   </header>
   
-  <!-- banner text -->
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1">
-      <div class="innerbanner-text text-center">
-        <p>About me</p>
-        <!-- banner text --> 
-      </div>
-    </div>
-  </div>
-</section>
-<!-- header section --> 
-<!-- description text section -->
-<section id="inner-description" class="section inner-description">
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1 text-center"> <img src="images/jwb.jpg" alt="Josh Basterfield">
-      <h1>Josh Basterfield</h1>
-      <p>Data Developer / Architect</p>
-    </div>
-    <div class="col-md-10 col-md-offset-1 space">
-      <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet avida at eget metus.Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet avida at eget metus.</p>
-      <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet avida at eget metus.Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet avida at eget metus.</p>
-    </div>
-  </div>
-</section>
-<!-- description text section --> 
-
+  
+ 	<?
+		$page = $_GET[page];
+		if (isset($page)) {
+			if (file_exists($page.".php")) {
+				require($page.".php");
+			}else {
+				echo $page." does not exist in our page's.";
+			}
+		}else {
+			require("home.php");
+		}
+	?>
+	
 <!-- hire me section -->
 <section id="hireme" class="section hireme">
   <div class="container">
@@ -72,9 +59,10 @@
       <a href="contact.html" class="btn btn-large">Hire me</a> </div>
   </div>
 </section>
-<!-- hire me section --> 
+<!-- hire me section --> 	
+	
+	
 <!-- footer -->
-
 <footer class="section footer">
   <div class="footer-bottom">
     <div class="container">
