@@ -27,7 +27,7 @@
     <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt="Mafolio"></a>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
-          <li><a href="about.html">About Me</a></li>
+          <li><a href="?page=home">About Me</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="#">External link</a></li>
         </ul>
